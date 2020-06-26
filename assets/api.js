@@ -3,9 +3,11 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 
 const formId = urlParams.get("id");
+const apiCode = urlParams.get("code");
+const apiUrl = `http://${apiCode}.ngrok.io/forms/${formId}`;
 
 const userAction = async () => {
-  const response = await fetch(`http://localhost:3333/forms/${formId}`);
+  const response = await fetch(apiUrl);
   const form = await response.json();
   let { fields, title } = form;
 
@@ -55,7 +57,7 @@ const submitForm = async (e) => {
 
   console.log(JSON.stringify(form_fields));
 
-  const response = await fetch(`http://localhost:3333/forms/${formId}`, {
+  const response = await fetch(apiUrl, {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(form_fields),
