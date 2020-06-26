@@ -31,7 +31,7 @@ const userAction = async () => {
 };
 
 const submitForm = async (e) => {
-  if (e.preventDefault) e.preventDefault();
+  e.preventDefault();
 
   const field_list = document
     .getElementById("field_list")
