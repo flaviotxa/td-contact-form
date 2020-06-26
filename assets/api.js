@@ -4,7 +4,7 @@ const urlParams = new URLSearchParams(queryString);
 
 const formId = urlParams.get("id");
 const apiCode = urlParams.get("code");
-const apiUrl = `http://${apiCode}.ngrok.io/forms/${formId}`;
+const apiUrl = `https://${apiCode}.ngrok.io/forms/${formId}`;
 
 const userAction = async () => {
   const response = await fetch(apiUrl);
