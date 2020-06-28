@@ -11,6 +11,26 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
       rel="stylesheet"
     />
+    <style type="text/css">
+      /* Fix Input Zoom on iPhone 6, iPhone 6s, iPhone 7  */
+      @media screen and (device-aspect-ratio: 375/667) {
+        select,
+        textarea,
+        input[type="text"],
+        input[type="password"],
+        input[type="datetime"],
+        input[type="datetime-local"],
+        input[type="date"],
+        input[type="month"],
+        input[type="time"],
+        input[type="week"],
+        input[type="number"],
+        input[type="email"],
+        input[type="url"] {
+          font-size: 16px;
+        }
+      }
+    </style>
   </head>
   <body class="h-screen">
     <div id="container" class="flex flex-wrap items-center h-screen">
