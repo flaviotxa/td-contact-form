@@ -17,15 +17,19 @@ const userAction = async () => {
   fields.forEach((field) => {
     var li = document.createElement("li");
 
-    li.innerHTML += `<label>${field.label} </label>
-      <div>
+    li.innerHTML += `
+      <div class="mb-4">
+        <label
+          class="block text-gray-700 text-sm font-bold mb-2"
+          for="${field._id}"
+        >
+          ${field.label}
+        </label>
         <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           id="${field._id}"
-          name="element_1"
           type="${field.field_type}"
-          maxlength="255"
-          value=""
-        />
+        /> 
       </div>`;
 
     field_list.appendChild(li);
@@ -63,7 +67,9 @@ const submitForm = async (e) => {
     body: JSON.stringify(form_fields),
   });
 
-  document.body.innerHTML = "<p>Thanks for the reply!</p>";
+  document.getElementById(
+    "center"
+  ).innerHTML = `<p class="text-center text-gray-700 text-3xl font-bold">Thanks for the reply!</p>`;
 };
 
 var form = document.getElementById("form");
