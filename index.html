@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Talkdesk Rapid Forms</title>
     <link
       href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
@@ -11,31 +12,11 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
       rel="stylesheet"
     />
-    <style type="text/css">
-      /* Fix Input Zoom on iPhone 6, iPhone 6s, iPhone 7  */
-      @media screen and (device-aspect-ratio: 375/667) {
-        select,
-        textarea,
-        input[type="text"],
-        input[type="password"],
-        input[type="datetime"],
-        input[type="datetime-local"],
-        input[type="date"],
-        input[type="month"],
-        input[type="time"],
-        input[type="week"],
-        input[type="number"],
-        input[type="email"],
-        input[type="url"] {
-          font-size: 16px;
-        }
-      }
-    </style>
   </head>
-  <body class="h-screen">
-    <div id="container" class="flex flex-wrap items-center h-screen">
-      <div id="center" class="w-full mb-4">
-        <div class="w-full">
+  <body class="w-auto h-screen">
+    <div id="container" class="w-screen flex flex-wrap items-center h-screen">
+      <div id="center" class="w-screen mb-4">
+        <div class="w-auto">
           <p
             id="form_title"
             class="text-center text-gray-700 text-3xl font-bold"
@@ -48,7 +29,7 @@
           >
             <ul id="field_list"></ul>
 
-            <div class="flex items-center justify-between">
+            <div class="w-auto flex items-center justify-between">
               <button
                 class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                 type="submit"
@@ -57,7 +38,7 @@
               </button>
             </div>
           </form>
-          <p class="text-center text-gray-500 text-xs">
+          <p class="w-auto text-center text-gray-500 text-xs">
             &copy;2020 Hackaton Talkdesk.
           </p>
         </div>
